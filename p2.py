@@ -19,40 +19,6 @@ def add_person(first_name, last_name, age, birth, person_list, person_id):
     person_list.append(new_person)
     return person_id + 1
 
-def find_person_by_id(person_list, id):
-    for person in person_list:
-        if person["id"] == id:
-            return person
-
-    return None
-
-def find_person_by_name(first_name, last_name, person_list):
-    for person in person_list:
-        if (person["first_name"] == first_name) and (person["last_name"] == last_name):
-            return person
-    return None
-
-def update_person (id, first_name, last_name, age, birth, person_list):
-    for person in person_list:
-        if person["id"] == id:
-            person["first_name"] = first_name
-            person["last_name"]  = last_name
-            person["age"]  = age
-            person["birth"]  = birth
-            return person
-
-    return None
-
-def delete_person(id, person_list):
-    position = 0
-    for person in person_list:
-        if person["id"] == id:
-            del person_list[position]
-            return True
-        else:
-            position +=1
-
-    return False
 
 def print_person_list(person_list):
     for person in person_list:
@@ -73,6 +39,9 @@ def handle_add_new_person(person_list, person_id):
 def handle_view_all_person(person_list, person_id):
     print_person_list(person_list)
     return person_id
+
+
+###########################################################
 
 def print_program_menu():
     print "\n"
