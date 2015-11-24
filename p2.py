@@ -84,7 +84,7 @@ def main():
             #option was valid
             if option_info_tuple[1] == 7:
                 done = True
-                print "Thanks for using the unit conversion program"
+                print "Thanks for using the person database program"
             else:
                 person_id = process_operation(option_info_tuple[1], person_list, person_id)
         else:
