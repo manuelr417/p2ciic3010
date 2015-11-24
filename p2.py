@@ -99,6 +99,8 @@ def identify_option(option):
 def process_operation(numeric_option, person_list, person_id):
     if (numeric_option == 1):
         return handle_add_new_person(person_list, person_id)
+    elif (numeric_option == 6):
+        return handle_view_all_person(person_list, person_id)
 
 
 def main():
@@ -111,7 +113,7 @@ def main():
         option_info_tuple = identify_option(user_option)
         if option_info_tuple[0] == 0:
             #option was valid
-            if option_info_tuple[1] == 9:
+            if option_info_tuple[1] == 7:
                 done = True
                 print "Thanks for using the unit conversion program"
             else:
